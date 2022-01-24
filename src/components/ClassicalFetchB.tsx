@@ -7,6 +7,8 @@ export const ClassicalFetchB: VFC = () => {
   const navigate = useNavigate()
   const { tasks } = useStateContext()
 
+  console.log('rendered ClassicalFetchB')
+
   return (
     <div className='flex flex-col justify-center items-center'>
       <p className='text-center font-bold mb-3'>

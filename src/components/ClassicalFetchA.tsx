@@ -7,6 +7,8 @@ export const ClassicalFetchA: VFC = () => {
   const navigate = useNavigate()
   const { tasks, isLoading, isError } = useClassicalFetch()
 
+  console.log('rendered ClassicalFetchA')
+
   if (isError) return <div>Error</div>
   if (isLoading) return <div>Loading...</div>
   return (
