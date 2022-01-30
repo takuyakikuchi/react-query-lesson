@@ -8,6 +8,8 @@ import { Layout } from './components/Layout'
 import { StateProvider } from './context/StateProvider'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
+import { MainContext } from './components/MainContext'
+import { MainRTKit } from './components/MainRTKit'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -30,6 +32,8 @@ const App: VFC = () => {
               <Route path='/query-b' element={<ReactQueryB />} />
               <Route path='/fetch-a' element={<ClassicalFetchA />} />
               <Route path='/fetch-b' element={<ClassicalFetchB />} />
+              <Route path='/main-context' element={<MainContext />} />
+              <Route path='/main-rtkit' element={<MainRTKit />} />
             </Routes>
           </Layout>
         </StateProvider>
